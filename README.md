@@ -2,7 +2,7 @@
 
 
 A Streamlit app generates amazon products summaries and helps find similar products and potential customers. The app is deployed
-(https://streamlit-nlp-demo.herokuapp.com/).
+(https://amazonge.herokuapp.com/)
 
 1. Business objective
 ----Customers conducted successive drill-down searches to finish investigations of products, business reputations. Time-consuming.
