@@ -10,7 +10,6 @@ import streamlit.components.v1 as components
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import CountVectorizer
 import altair as alt
-from spacy.lang.en.stop_words import STOP_WORDS
 
 
 ## Load Data for Web Page 1
@@ -117,9 +116,6 @@ def app():
 
         sort_S_1= np.load('data/sort_S_1.npy')
         S = np.load('data/S.npy')
-
-        STOP_WORDS = STOP_WORDS.difference({'he','his','her','hers'})
-        STOP_WORDS = STOP_WORDS.union({'ll', 've'})
 
         st.title("Amazon Networks Explorer")    
         titles = st.multiselect(
