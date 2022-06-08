@@ -4,12 +4,9 @@ import altair as alt
 from urllib.error import URLError
 from PIL import Image
 from wordcloud import WordCloud, STOPWORDS
-import plotly.express as px 
 import numpy as np
 import matplotlib.pyplot as plt
 import streamlit.components.v1 as components
-import codecs
-import webbrowser
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import CountVectorizer
 import altair as alt
