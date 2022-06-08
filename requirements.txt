@@ -4,3 +4,4 @@ matplotlib
 wordcloud
 pillow
 sklearn
+spacy
