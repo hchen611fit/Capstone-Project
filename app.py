@@ -132,9 +132,6 @@ def app():
             'Similarity':S[prod_index,1:],
         })
 
-            blankIndex = ['']*len(result)
-            result.index = blankIndex
-
             return result
 
         def find_customers(prod):
@@ -144,10 +141,7 @@ def app():
             N = len(dff)
             M = min(100,N)
             result = dff['reviewerName'].sample(n= M, random_state=42)
-            # result = np.array(temp)
 
-            blankIndex = ['']*len(result)
-            result.index = blankIndex
 
             return result
 
