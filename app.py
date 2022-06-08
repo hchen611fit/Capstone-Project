@@ -143,9 +143,19 @@ def app():
             result = dff['reviewerName'].sample(n= M, random_state=42)
             return result
 
+        
+        # CSS to inject contained in a string
+        hide_dataframe_row_index = """
+            <style>
+            .row_heading.level0 {display:none}
+            .blank {display:none}
+            </style>
+            """
+    # Inject CSS with Markdown
+        st.markdown(hide_dataframe_row_index, unsafe_allow_html=True)
         if len(titles):
             st.write("Similar Products of the LAST Product You Select are:")
-            st.write(find_similar(titles[-1]))
+            st.dataframe(find_similar(titles[-1]))
             input_ = find_customers(titles[-1]).tolist()    
             list2text = ', '.join(map(str, input_))
             st.text_area('Up to 100 Potential Customers For You:', value= list2text, height=180, max_chars=None, key=None)
