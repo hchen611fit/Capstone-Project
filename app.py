@@ -141,8 +141,6 @@ def app():
             N = len(dff)
             M = min(100,N)
             result = dff['reviewerName'].sample(n= M, random_state=42)
-
-
             return result
 
         if len(titles):
