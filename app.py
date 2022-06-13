@@ -119,7 +119,7 @@ def app():
 
         st.title("Amazon Networks Explorer")    
         titles = st.multiselect(
-                "Choose products", list(df2.title), ["12 Classic Color Elegant Blush Set"])  
+                "Choose products", list(df2.title), ["Moisturizing Day Face Cream"])  
 
         def find_similar(prod):
             prod_index = df2.loc[df2['title'] == prod].index[0]
